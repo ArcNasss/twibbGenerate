@@ -36,8 +36,8 @@ export default function RenderForm({ searchParams }: Readonly<Props>) {
     if (!customFrameUrl) {
       return (
         <h1 className="text-[36px] font-bold leading-[130%] sm:text-[44px] mb-[18px]">
-          <span className="text-yellow-500">Something went wrong</span> Please
-          reload the page.
+          <span className="text-yellow-500">Something went wrong</span> refresh
+          sekali lagi 🙏😁
         </h1>
       );
     }

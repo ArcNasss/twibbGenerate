@@ -41,6 +41,9 @@ export default function Home({ searchParams }: Readonly<Props>) {
         </p>
       </div>
       <RenderForm searchParams={searchParams} />
+      <p className="text-gray-500">
+        &copy;By Nasril Created with <span className="animate-pulse ">❤️</span>
+      </p>
     </div>
   );
 }
