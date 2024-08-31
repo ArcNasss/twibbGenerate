@@ -16,18 +16,18 @@ export default function RenderForm({ searchParams }: Readonly<Props>) {
   const [customFrameUrl, setCustomFrameUrl] = useState<string | undefined>(
     undefined
   );
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Periksa jika `localStorage` ada dan ambil nilai jika tersedia
     const storedFrameUrl = localStorage.getItem("customFrameUrl");
     setCustomFrameUrl(storedFrameUrl || undefined);
+    setIsLoading(false); // Set loading to false once data is fetched
   }, []);
 
-  // Tampilkan loading atau fallback hingga `useEffect` selesai
-  if (customFrameUrl === undefined) {
+  if (isLoading) {
     return (
       <h1 className="text-[36px] font-bold leading-[130%] sm:text-[44px] mb-[18px]">
-        <span className="text-yellow-500">Loading...</span> Please wait.
+        <span className="text-yellow-500">please...</span> refresh this page
       </h1>
     );
   }
@@ -36,7 +36,7 @@ export default function RenderForm({ searchParams }: Readonly<Props>) {
     if (!customFrameUrl) {
       return (
         <h1 className="text-[36px] font-bold leading-[130%] sm:text-[44px] mb-[18px]">
-          <span className="text-primary-500">Something went wrong</span> Please
+          <span className="text-yellow-500">Something went wrong</span> Please
           reload the page.
         </h1>
       );
