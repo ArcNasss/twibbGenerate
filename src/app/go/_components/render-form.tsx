@@ -27,7 +27,7 @@ export default function RenderForm({ searchParams }: Readonly<Props>) {
   if (isLoading) {
     return (
       <h1 className="text-[36px] font-bold leading-[130%] sm:text-[44px] mb-[18px]">
-        <span className="text-yellow-500">please...</span> refresh this page
+        <span className="text-yellow-500">Loading...</span> sabar dikit 🙏
       </h1>
     );
   }

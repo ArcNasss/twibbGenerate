@@ -28,7 +28,7 @@ export default function Home({ searchParams }: Readonly<Props>) {
       <div className="w-full md:w-1/2">
         <h1 className="text-[22px] sm:text-[36px] font-bold leading-[130%] mb-[18px]">
           <span className="text-yellow-500 text-[40px] sm:text-[50px]">
-            PPTA 2024
+            PPTA 2024⚜️
             <br />
           </span>{" "}
           PERKEMAHAN PENERIMAAN TAMU AMBALAN
